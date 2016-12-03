@@ -2,17 +2,17 @@ var mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/moviedatabase');
 
-var movieschema = new mongoose.Schema({ name: 'string'});
 
-var Movie = mongoose.model('Movie', movieschema);
+var mongooseConnection = mongoose;
 
-// var SPR = new Movie({ name: 'Saving Private Wilson' });
+mongoose.connection.on('error', console.error.bind(console, 'connection error:'));
+mongoose.connection.once('open', function () {
+  console.log('Mongodb connection open');
+});
 
-// SPR.save(function (err) {
-//   if (err) return handleError(err);
-//   // saved!
-// })
 
-module.exports = Movie;
+module.exports = mongooseConnection;
 
-// make a file that makes dummy data for the server when executed with node
+
+
+// creates schema / models for mongodb via mongoose

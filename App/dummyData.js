@@ -1,6 +1,6 @@
 var express = require('express');
-var Movie = require('./config.js');
-
+var Movie = require('./models/movie');
+var mongooseConnection = require('./config.js');
 
 
 var testMovies = [
@@ -24,16 +24,5 @@ for (var i = 0; i < testMovies.length; i++) {
 
 
 
-// var numTestDocs = 100; // or however many you want
-// for(var i = 0; i < numTestDocs; i++) {
-//    var someLength = 12; // Alternatively, you could use a random number generator
-//    var randomWord = createRandomWord(someLength);
-//    var item = new Item ({
-//       title : randomWord ,
-//       desc  : randomWord + ' is just a test'
-//    });
-//    item.save(function(err, doc) {
-//       // do error handling if you want to
-//       console.log('Test Record Saved with id: ' + doc._id);
-//    });
-// }
+
+// make a file that makes dummy data for the server when executed with node
