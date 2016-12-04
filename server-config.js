@@ -3,26 +3,12 @@ var Movie = require('./App/Models/movie');
 var mongooseConnection = require('./app/config.js');
 
 var path = require('path');
-
 var app = express();
 
-app.use(express.static(__dirname + '/client/'));
+// this works as well
+// app.use(express.static(__dirname + '/client/'));
 
-// app.use(express.static(path.join(__dirname, 'client')));
-
-// app.use("/styles", express.static(__dirname + '/client'));
-
-// app.use('/static', express.static(__dirname + '/client'));
-
-
-// WORKS
-// app.get('/client/styles/style.css', (req, res) => {
-//   res.sendFile(__dirname + '/client/styles/styles.css')
-// })
-
-// app.get('/', (req, res) => {
-//   res.sendFile(__dirname + '/client/index.html');
-// })
+app.use(express.static(path.join(__dirname, 'client')));
 
 app.get('/addMovie', (req, res) => {
   var movie = new Movie({name: 'Saving Private Katharine'});
@@ -32,10 +18,18 @@ app.get('/addMovie', (req, res) => {
     }
     console.log('MOVIE SAVED', movie);
   })
-})
+});
 
-// app.get('/getMovies ', (req, res) => {
+app.get('/getMovies', (req, res) => {
 
-// })
+  Movie.find({}, (err, movies) => {
+    if (err) {
+      return console.error(err);
+    }
+    movies.forEach((movie) => {
+      console.log(movie);
+    })
+  })
+});
 
 module.exports = app;
