@@ -57,9 +57,23 @@
 	
 	var _reactDom = __webpack_require__(/*! react-dom */ 32);
 	
-	var _AwesomeComponent = __webpack_require__(/*! ./AwesomeComponent.jsx */ 178);
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _AwesomeComponent = __webpack_require__(/*! ./Components/AwesomeComponent.jsx */ 178);
 	
 	var _AwesomeComponent2 = _interopRequireDefault(_AwesomeComponent);
+	
+	var _AddFavorite = __webpack_require__(/*! ./Components/AddFavorite.jsx */ 181);
+	
+	var _AddFavorite2 = _interopRequireDefault(_AddFavorite);
+	
+	var _GetMovies = __webpack_require__(/*! ./Components/GetMovies.jsx */ 180);
+	
+	var _GetMovies2 = _interopRequireDefault(_GetMovies);
+	
+	var _GetAPI = __webpack_require__(/*! ./Components/GetAPI.jsx */ 183);
+	
+	var _GetAPI2 = _interopRequireDefault(_GetAPI);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -85,11 +99,34 @@
 	        'div',
 	        null,
 	        _react2.default.createElement(
-	          'p',
+	          'div',
 	          null,
-	          'Hello React!'
-	        ),
-	        _react2.default.createElement(_AwesomeComponent2.default, null)
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Hello React!'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'AwesomeComponent' },
+	            _react2.default.createElement(_AwesomeComponent2.default, null)
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'AddFavorite' },
+	            _react2.default.createElement(_AddFavorite2.default, null)
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'GetMovies' },
+	            _react2.default.createElement(_GetMovies2.default, null)
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'GetAPI' },
+	            _react2.default.createElement(_GetAPI2.default, null)
+	          )
+	        )
 	      );
 	    }
 	  }]);
@@ -97,7 +134,7 @@
 	  return App;
 	}(_react2.default.Component);
 	
-	(0, _reactDom.render)(_react2.default.createElement(App, null), document.getElementById('app'));
+	_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('app'));
 
 /***/ },
 /* 1 */
@@ -22039,9 +22076,9 @@
 
 /***/ },
 /* 178 */
-/*!*****************************************!*\
-  !*** ./client/app/AwesomeComponent.jsx ***!
-  \*****************************************/
+/*!****************************************************!*\
+  !*** ./client/app/Components/AwesomeComponent.jsx ***!
+  \****************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22072,7 +22109,9 @@
 	
 	    var _this = _possibleConstructorReturn(this, (AwesomeComponent.__proto__ || Object.getPrototypeOf(AwesomeComponent)).call(this, props));
 	
-	    _this.state = { likesCount: 0 };
+	    _this.state = {
+	      likesCount: 0
+	    };
 	    _this.onLike = _this.onLike.bind(_this);
 	    return _this;
 	  }
@@ -22112,6 +22151,95 @@
 	}(_react2.default.Component);
 	
 	exports.default = AwesomeComponent;
+
+/***/ },
+/* 179 */,
+/* 180 */
+/*!*********************************************!*\
+  !*** ./client/app/Components/GetMovies.jsx ***!
+  \*********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var GetMovies = function GetMovies() {
+	  return _react2.default.createElement(
+	    'a',
+	    { href: '/getMovies' },
+	    'Get Movies'
+	  );
+	};
+	
+	exports.default = GetMovies;
+
+/***/ },
+/* 181 */
+/*!***********************************************!*\
+  !*** ./client/app/Components/AddFavorite.jsx ***!
+  \***********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var AddFavorite = function AddFavorite() {
+	  return _react2.default.createElement(
+	    'a',
+	    { href: '/addFavorite' },
+	    'Add MovieSSS'
+	  );
+	};
+	
+	exports.default = AddFavorite;
+
+/***/ },
+/* 182 */,
+/* 183 */
+/*!******************************************!*\
+  !*** ./client/app/Components/GetAPI.jsx ***!
+  \******************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var GetAPI = function GetAPI() {
+	  return _react2.default.createElement(
+	    'a',
+	    { href: '/getAPI' },
+	    'Get API'
+	  );
+	};
+	
+	exports.default = GetAPI;
 
 /***/ }
 /******/ ]);

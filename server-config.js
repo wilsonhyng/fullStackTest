@@ -21,7 +21,7 @@ var router = express.Router();
 app.use(express.static(path.join(__dirname, 'client')));
 
 
-app.get('/addMovie', (req, res) => {
+app.get('/addFavorite', (req, res) => {
   var movie = new Movie({name: 'Saving Private Katharine'});
   movie.save((err, movie) => {
     if (err) {
@@ -45,7 +45,7 @@ app.get('/getMovies', (req, res) => {
   res.status(200).redirect('/');
 });
 
-app.get('/getApi', function (req, res) {  
+app.get('/getAPI', function (req, res) {  
   request.get('https://api.hypem.com/v2/users/wily6/favorites?page=1&count=10&key=swagger', function(error, response, body) {
     // console.log(JSON.parse(body));
     res.send(JSON.parse(body));

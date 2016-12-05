@@ -1,10 +1,11 @@
 import React from 'react';
 
 class AwesomeComponent extends React.Component {
-
   constructor(props) {
     super(props);
-    this.state = {likesCount : 0};
+    this.state = {
+      likesCount: 0
+    };
     this.onLike = this.onLike.bind(this);
   }
 
