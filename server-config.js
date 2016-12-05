@@ -1,5 +1,5 @@
 var express = require('express');
-var bodyParser = require('body-parser');
+// var bodyParser = require('body-parser');
 
 var request = require('request');
 
@@ -12,13 +12,14 @@ var app = express();
 var router = express.Router();
 
 
-var jsonParser = bodyParser.json();
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
+// var jsonParser = bodyParser.json();
+// var urlencodedParser = bodyParser.urlencoded({ extended: false });
+
 // this works as well
 // app.use(express.static(__dirname + '/client/'));
 
 app.use(express.static(path.join(__dirname, 'client')));
-// app.use(router);
+
 
 app.get('/addMovie', (req, res) => {
   var movie = new Movie({name: 'Saving Private Katharine'});
@@ -44,27 +45,12 @@ app.get('/getMovies', (req, res) => {
   res.status(200).redirect('/');
 });
 
-// app.get('https://api.hypem.com/v2/users/wily6/favorites', function(req, res) {
-//   req.page = 2;
-//   req.count = 10;
-
- 
-//   console.log(res);
-
-// });
-
 app.get('/getApi', function (req, res) {  
-
   request.get('https://api.hypem.com/v2/users/wily6/favorites?page=1&count=10&key=swagger', function(error, response, body) {
-    console.log(JSON.parse(body));
+    // console.log(JSON.parse(body));
     res.send(JSON.parse(body));
 
   });
-  // .on('response', function(req, res) {
-  //   console.log(JSON.stringify(res));
-
-
-
 });
 
 
