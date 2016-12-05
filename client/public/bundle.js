@@ -49,8 +49,6 @@
 
 	'use strict';
 	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
 	var _react = __webpack_require__(/*! react */ 1);
 	
 	var _react2 = _interopRequireDefault(_react);
@@ -59,82 +57,13 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _AwesomeComponent = __webpack_require__(/*! ./Components/AwesomeComponent.jsx */ 178);
+	var _App = __webpack_require__(/*! ./Components/App.jsx */ 184);
 	
-	var _AwesomeComponent2 = _interopRequireDefault(_AwesomeComponent);
-	
-	var _AddFavorite = __webpack_require__(/*! ./Components/AddFavorite.jsx */ 181);
-	
-	var _AddFavorite2 = _interopRequireDefault(_AddFavorite);
-	
-	var _GetMovies = __webpack_require__(/*! ./Components/GetMovies.jsx */ 180);
-	
-	var _GetMovies2 = _interopRequireDefault(_GetMovies);
-	
-	var _GetAPI = __webpack_require__(/*! ./Components/GetAPI.jsx */ 183);
-	
-	var _GetAPI2 = _interopRequireDefault(_GetAPI);
+	var _App2 = _interopRequireDefault(_App);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var App = function (_React$Component) {
-	  _inherits(App, _React$Component);
-	
-	  function App() {
-	    _classCallCheck(this, App);
-	
-	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
-	  }
-	
-	  _createClass(App, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Hello React!'
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { id: 'AwesomeComponent' },
-	            _react2.default.createElement(_AwesomeComponent2.default, null)
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { id: 'AddFavorite' },
-	            _react2.default.createElement(_AddFavorite2.default, null)
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { id: 'GetMovies' },
-	            _react2.default.createElement(_GetMovies2.default, null)
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { id: 'GetAPI' },
-	            _react2.default.createElement(_GetAPI2.default, null)
-	          )
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return App;
-	}(_react2.default.Component);
-	
-	_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('app'));
+	_reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById('app'));
 
 /***/ },
 /* 1 */
@@ -22240,6 +22169,106 @@
 	};
 	
 	exports.default = GetAPI;
+
+/***/ },
+/* 184 */
+/*!***************************************!*\
+  !*** ./client/app/Components/App.jsx ***!
+  \***************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(/*! react-dom */ 32);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _AwesomeComponent = __webpack_require__(/*! ./AwesomeComponent.jsx */ 178);
+	
+	var _AwesomeComponent2 = _interopRequireDefault(_AwesomeComponent);
+	
+	var _AddFavorite = __webpack_require__(/*! ./AddFavorite.jsx */ 181);
+	
+	var _AddFavorite2 = _interopRequireDefault(_AddFavorite);
+	
+	var _GetMovies = __webpack_require__(/*! ./GetMovies.jsx */ 180);
+	
+	var _GetMovies2 = _interopRequireDefault(_GetMovies);
+	
+	var _GetAPI = __webpack_require__(/*! ./GetAPI.jsx */ 183);
+	
+	var _GetAPI2 = _interopRequireDefault(_GetAPI);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var App = function (_React$Component) {
+	  _inherits(App, _React$Component);
+	
+	  function App() {
+	    _classCallCheck(this, App);
+	
+	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+	  }
+	
+	  _createClass(App, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Hello React!'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'AwesomeComponent' },
+	            _react2.default.createElement(_AwesomeComponent2.default, null)
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'AddFavorite' },
+	            _react2.default.createElement(_AddFavorite2.default, null)
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'GetMovies' },
+	            _react2.default.createElement(_GetMovies2.default, null)
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'GetAPI' },
+	            _react2.default.createElement(_GetAPI2.default, null)
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return App;
+	}(_react2.default.Component);
+	
+	exports.default = App;
 
 /***/ }
 /******/ ]);
