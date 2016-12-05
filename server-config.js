@@ -46,12 +46,21 @@ app.get('/getMovies', (req, res) => {
 });
 
 app.get('/getAPI', function (req, res) {  
-  request.get('https://api.hypem.com/v2/users/wily6/favorites?page=1&count=10&key=swagger', function(error, response, body) {
-    // console.log(JSON.parse(body));
-    res.send(JSON.parse(body));
+  var username = 'wily6';
+  var url = 'https://api.hypem.com/v2/users/' + username + '/favorites?page=1&count=10&key=swagger';
 
+  request.get(url, function(error, response, body) {
+    res.send(JSON.parse(body));
   });
 });
+
+
+
+
+
+
+
+
 
 
 module.exports = app;

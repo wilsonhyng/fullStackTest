@@ -22220,11 +22220,29 @@
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
 	
-	  function App() {
+	  function App(props) {
 	    _classCallCheck(this, App);
 	
-	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+	
+	    _this.state = {
+	      // username: username
+	    };
+	    return _this;
 	  }
+	
+	  // componentDidMount() {
+	  //   this.getHYPEM('wily6');
+	  // }
+	
+	  // getHYPEM(username) {
+	  //   this.props.searchHYPEM(options, (username) =>
+	  //     this.setState({
+	  //       username: username
+	  //     })
+	  //   );
+	  // }
+	
 	
 	  _createClass(App, [{
 	    key: 'render',

@@ -7,6 +7,28 @@ import GetMovies from './GetMovies.jsx';
 import GetAPI from './GetAPI.jsx';
 
 class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      // username: username
+    };
+  }
+
+  // componentDidMount() {
+  //   this.getHYPEM('wily6');
+  // }
+
+  // getHYPEM(username) {
+  //   this.props.searchHYPEM(options, (username) =>
+  //     this.setState({
+  //       username: username
+  //     })
+  //   );
+  // }
+
+
+
   render () {
     return (
       <div>
