@@ -22242,23 +22242,27 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { id: 'AwesomeComponent' },
-	            _react2.default.createElement(_AwesomeComponent2.default, null)
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { id: 'AddFavorite' },
-	            _react2.default.createElement(_AddFavorite2.default, null)
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { id: 'GetMovies' },
-	            _react2.default.createElement(_GetMovies2.default, null)
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { id: 'GetAPI' },
-	            _react2.default.createElement(_GetAPI2.default, null)
+	            { className: 'row' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col-xs-3', id: 'AwesomeComponent' },
+	              _react2.default.createElement(_AwesomeComponent2.default, null)
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col-xs-3', id: 'AddFavorite' },
+	              _react2.default.createElement(_AddFavorite2.default, null)
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col-xs-3', id: 'GetMovies' },
+	              _react2.default.createElement(_GetMovies2.default, null)
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col-xs-3', id: 'GetAPI' },
+	              _react2.default.createElement(_GetAPI2.default, null)
+	            )
 	          )
 	        )
 	      );

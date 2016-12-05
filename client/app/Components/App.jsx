@@ -12,27 +12,29 @@ class App extends React.Component {
       <div>
         <div>
           <p>Hello React!</p>
+
+          <div className="row">
           
-          <div id='AwesomeComponent'>
-            <AwesomeComponent />
+            <div className="col-xs-3"id='AwesomeComponent'>
+              <AwesomeComponent />
+            </div>
+
+            <div className="col-xs-3" id='AddFavorite'>
+              <AddFavorite />
+            </div>
+            
+            <div className="col-xs-3" id='GetMovies'>
+              <GetMovies />
+            </div>
+
+            <div className="col-xs-3" id='GetAPI'>
+              <GetAPI />
+            </div>
+          
           </div>
 
-          <div id='AddFavorite'>
-            <AddFavorite />
-          </div>
-          
-          <div id='GetMovies'>
-            <GetMovies />
-          </div>
-
-          <div id='GetAPI'>
-            <GetAPI />
-          </div>
-        
         </div>
         
-
-
       </div>
     );
   }

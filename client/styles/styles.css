@@ -3,3 +3,11 @@ body {
   font-family: sans-serif;
   background-color: orange;
 }
+
+p {
+  text-align: center;
+}
+
+#AddFavorite {
+  border: 2px black solid;
+}
