@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 
 import AwesomeComponent from './AwesomeComponent.jsx';
 import AddFavorite from './AddFavorite.jsx';
@@ -12,6 +13,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       // username: username
+      favorites: []
     };
   }
 
@@ -26,6 +28,15 @@ class App extends React.Component {
   //     })
   //   );
   // }
+
+  componentDidMount() {
+    axios.get('/getAPI')
+      .then(res => {
+        console.log(res.data[0]);
+        const favorites = res.data;
+        this.setState({ favorites });
+      });
+  }
 
 
 
@@ -51,6 +62,13 @@ class App extends React.Component {
 
             <div className="col-xs-3" id='GetAPI'>
               <GetAPI />
+            </div>
+
+            <div>
+              <ul>
+                {this.state.favorites.map(favorite => <li>{favorite.artist} + {favorite.title}</li> 
+                  )}
+              </ul>
             </div>
           
           </div>

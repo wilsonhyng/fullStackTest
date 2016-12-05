@@ -50,6 +50,7 @@ app.get('/getAPI', function (req, res) {
   var url = 'https://api.hypem.com/v2/users/' + username + '/favorites?page=1&count=10&key=swagger';
 
   request.get(url, function(error, response, body) {
+    // console.log(JSON.parse(body).length);
     res.send(JSON.parse(body));
   });
 });

@@ -1,9 +1,10 @@
 import React from 'react';
 
-const GetMovies = () => {
-  return (
+const GetMovies = () => (
+
     <a href='/getMovies'>Get Movies</a>
-  );
-};
+
+);
+
 
 export default GetMovies;
