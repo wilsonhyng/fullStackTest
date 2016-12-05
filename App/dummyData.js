@@ -8,18 +8,18 @@ var testMovies = [
   {name: 'Arrival'},
   {name: 'Contact'},
   {name: 'Sunshine'}
-]
+];
 
 
 for (var i = 0; i < testMovies.length; i++) {
-  var testMovie = new Movie(testMovies[i])
+  var testMovie = new Movie(testMovies[i]);
   testMovie.save((err, doc) => {
     if (err) {
       console.log(err);
     } else {
       console.log('Test Movie Saved with id: ' + doc._id);
     }
-  })
+  });
 }
 
 
